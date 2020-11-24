@@ -1,12 +1,12 @@
 import Navbar from "./component/Navbar";
 import Footer from "./component/Footer"
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { HashRouter as Router, Route } from "react-router-dom";
 import Contactpage from "./component/htmlpages/Contactpage"
 import About from "./component/htmlpages/About"
 import Portfolio from "./component/htmlpages/Portfolio"
 
 function App() {
-  return ( <Router>
+  return ( <Router basename={process.env.PUBLIC_URL}>
     <div className="body">
       <Navbar />
       <div className="container">
